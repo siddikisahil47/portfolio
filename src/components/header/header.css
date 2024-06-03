@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-text {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    word-spacing: 5px;
+}
+
+.title-surname {
+    color: #909090;
+}
+
+.title-text:hover {
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
+}
+
+.options {
+    display: flex;
+    gap: 25px;
+}
+
+
+.separator {
+    height: 1px;
+    margin-top: 15px;
+    background-color: var(--text-color);
+    border: none;
+}

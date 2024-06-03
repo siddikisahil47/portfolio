@@ -1,0 +1,24 @@
+.separator {
+    height: 1px;
+    margin-bottom: 15px;
+    background-color: var(--text-color);
+    border: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    gap: 25px;
+}

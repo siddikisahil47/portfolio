@@ -1,0 +1,70 @@
+:root {
+    --text-color: #909090;
+    --heading-color: #030712;
+    --background-color: #fdffed;
+    --hover-color: blue;
+}
+
+body {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    background-color: var(--background-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+li {
+    list-style: none;
+}
+
+li:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.active {
+    color: rgb(47, 47, 97);
+    letter-spacing: 1px;
+}
+
+button {
+    background-color: var(--background-color);
+    color: var(--heading-color);
+    border-radius: 10em;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 9px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+button:hover {
+    transform:  translateX(5px);
+    box-shadow: 2px 5px 0 0 black;
+}
+
+p {
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
