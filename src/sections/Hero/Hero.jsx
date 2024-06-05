@@ -54,7 +54,7 @@ const Hero = () => {
                         <img src={linkedinIcon} alt="Linkedin Icon" />
                     </a>
                 </span>
-                <p>
+                <p className={styles.description}>
                     I am a AI/ML developer with a passion for developing AI with react web Apps 
                 </p> 
                 <a href={CV} download>
