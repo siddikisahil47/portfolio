@@ -1,20 +1,22 @@
 import './App.css'
-import Contact from './sections/Contact/Contact'
+import Home from './pages/Home'
+import Projects from './pages/Projects'
 import Footer from './sections/Footer/Footer'
-import Hero from './sections/Hero/Hero'
-import Projects from './sections/Projects/Projects'
-import Skills from './sections/Skills/Skills'
+import Header from './sections/Header/Header'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
 
   return (
-    <>
-      <Hero />
-      <Projects />
-      <Skills />
-      <Contact />
+    <BrowserRouter>
+      <Header />
+      <Routes >
+        <Route path='/' element={<Home />} />
+        <Route path='/projects' element={<Projects />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

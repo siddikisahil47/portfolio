@@ -6,7 +6,6 @@ const Footer = () => {
         <section id='footer' className={styles.container}>
             <p>
                 &copy; 2024 Sahil Siddiki.
-                <br />
                 All rights reserved.
             </p>
         </section>
