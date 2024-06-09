@@ -34,7 +34,7 @@ const WorkCard = ({ project }) => {
                 }
                 </div>
                 <Link to={`/projects/${project.id}`}>
-                    <span>Read More</span>
+                    <span className='readMore'>Read More</span>
                 </Link>
                 
             </div>

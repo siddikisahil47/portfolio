@@ -40,6 +40,11 @@
     margin-top: -15px;
     margin-bottom: 10px;
     text-align: justify;
+    color: hsl(0, 0%, 13%);
+}
+
+.readMore {
+    color: hsl(0, 0%, 13%);
 }
 
 .container {
