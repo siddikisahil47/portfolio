@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PiSquaresFour } from "react-icons/pi";
 import { IoClose, IoDocumentTextOutline } from "react-icons/io5";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
 import "./header.css";
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 const Header = () => {
     /*=============== Change Background Header ===============*/
@@ -15,6 +17,10 @@ const Header = () => {
         if (this.scrollY >= 80) header.classList.add("scroll-header");
         else header.classList.remove("scroll-header");
     });
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     /*=============== Toggle Menu ===============*/
     const [Toggle, ShowMenu] = useState(false);
@@ -29,32 +35,31 @@ const Header = () => {
                 <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
                     <ul className="nav__list">
                         <li className="nav__item">
-                            <a
-                                href="#home"
+                            <Link
+                                to={`/#home`}
                                 onClick={() => setActiveNav("#home")}
                                 className={
                                     activeNav === "#home" ? "nav__link active-link" : "nav__link"
                                 }>
-                                <FaHome className="nav__icon"/>
+                                <FaHome className="nav__icon" />
                                 Home
-                            </a>
+                            </Link>
                         </li>
-
                         <li className="nav__item">
-                            <a
-                                href="#projects"
+                            <Link
+                                to={`/#projects`}
                                 onClick={() => setActiveNav("#projects")}
                                 className={
                                     activeNav === "#projects" ? "nav__link active-link" : "nav__link"
                                 }>
-                                <GoProjectRoadmap className="nav__icon"/>
+                                <GoProjectRoadmap className="nav__icon" />
                                 Project
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav__item">
-                            <a
-                                href="#skills"
+                            <Link
+                                to={`/#skills`}
                                 onClick={() => setActiveNav("#skills")}
                                 className={
                                     activeNav === "#skills"
@@ -63,47 +68,22 @@ const Header = () => {
                                 }>
                                 < IoDocumentTextOutline className="nav__icon" />
                                 Skill
-                            </a>
-                        </li>
-
-                        {/* <li className="nav__item">
-                            <a
-                                href="#services"
-                                onClick={() => setActiveNav("#services")}
-                                className={
-                                    activeNav === "#services"
-                                        ? "nav__link active-link"
-                                        : "nav__link"
-                                }>
-                                <i className="uil uil-briefcase-alt nav__icon"></i> Services
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav__item">
-                            <a
-                                href="#portfolio"
-                                onClick={() => setActiveNav("#portfolio")}
-                                className={
-                                    activeNav === "#portfolio"
-                                        ? "nav__link active-link"
-                                        : "nav__link"
-                                }>
-                                <i className="uil uil-scenery nav__icon"></i> Portfolio
-                            </a>
-                        </li> */}
-
-                        <li className="nav__item">
-                            <a
-                                href="#contact"
+                            <Link
+                                to={`/#contact`}
+                                scroll={el => el.scrollIntoView({ behavior: 'instant', block: 'end' })}
                                 onClick={() => setActiveNav("#contact")}
                                 className={
                                     activeNav === "#contact"
                                         ? "nav__link active-link"
                                         : "nav__link"
                                 }>
-                                <MdOutlineContactPhone className="nav__icon"/>
+                                <MdOutlineContactPhone className="nav__icon" />
                                 Contact
-                            </a>
+                            </Link>
                         </li>
                     </ul>
 
@@ -111,7 +91,7 @@ const Header = () => {
                 </div>
 
                 <div className="nav__toggle" onClick={() => ShowMenu(!Toggle)}>
-                    <PiSquaresFour className="menu"/>
+                    <PiSquaresFour className="menu" />
                 </div>
             </nav>
         </header>

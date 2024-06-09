@@ -34,6 +34,14 @@
     justify-content: center;
 }
 
+.work__summary {
+    font-size: 12px;
+    max-width: 45ch;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
 .container {
     max-width: 968px;
     margin-left: auto;
@@ -55,6 +63,16 @@
 .workBottons {
     display: flex;
     justify-content: space-between;
+}
+
+.WorkIcons {
+    display: flex;
+    gap: 5px
+}
+
+.workButtonIcon {
+    width: 15px;
+    height: 15px;
 }
 
 button {
@@ -185,7 +203,7 @@ button:hover .button-text {
     align-items: center;
     column-gap: 0.25rem;
     border-radius: 0.5rem;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.25rem;
 }
 
 .work__button:hover {

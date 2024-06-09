@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    align-items: center;
+
+    img {
+        border-radius: 15px;
+    }
+
+}
+
+.detailBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 125ch;
+    text-align: justify;
+}
+
+.Icons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.detailIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.detailSummary {
+    font-size: 16px;
+    color: #888;
+}
+
+.detailDescription {
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.lineBreak {
+    margin-top: 20px;
+    text-indent: 3em;
+}
+
+.detailTech {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+.detailTechTitle{
+    font-size: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.detailTechused {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+.detailTechIcons {
+    gap: 15px;
+}
+
+@media screen and (max-width: 1100px) {
+    .detailBox {
+        max-width: 100ch;
+    }
+    .detailSummary{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .detailBox {
+        max-width: 80ch;
+    }
+    .detailSummary{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        img {
+            width: 75%;
+            height: 75%;
+        }
+    }
+    .detailBox {
+        margin:0 20px;
+        max-width: 60ch;
+    }
+    .detailSummary{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .detailBox {
+        margin:0 20px;
+        max-width: 45ch;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .detailBox {
+        margin:0 20px;
+        max-width: 40ch;
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 360px) {
+    .detailBox {
+        margin:0 20px;
+        max-width: 30ch;
+    }
+}
